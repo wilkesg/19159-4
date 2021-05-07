@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_SatelliteAttachmentInformation 
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:satelliteOrbitalHeight>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>100</gco:Real></cal:real>
+            <cal:real><gco:Real>200</gco:Real></cal:real>
+            <cal:real><gco:Real>300</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:satelliteOrbitalHeight>
+    <cal:satelliteAttitude>
+        <cal:SD_Attitude><smi:SD_AngleAttitude>
+            <smi:rotatedAxes><gco:Boolean>false</gco:Boolean></smi:rotatedAxes>
+            <smi:rotationAngleX><gco:Angle uom="degree">10</gco:Angle></smi:rotationAngleX>
+            <smi:rotationAngleY><gco:Angle uom="degree">20</gco:Angle></smi:rotationAngleY>
+            <smi:rotationAngleZ><gco:Angle uom="degree">30</gco:Angle></smi:rotationAngleZ>
+            <smi:rotationSequence></smi:rotationSequence>
+        </smi:SD_AngleAttitude></cal:SD_Attitude>
+        <cal:SD_Attitude><smi:SD_AngleAttitude>
+            <smi:rotatedAxes><gco:Boolean>false</gco:Boolean></smi:rotatedAxes>
+            <smi:rotationAngleX><gco:Angle uom="degree">50</gco:Angle></smi:rotationAngleX>
+            <smi:rotationAngleY><gco:Angle uom="degree">60</gco:Angle></smi:rotationAngleY>
+            <smi:rotationAngleZ><gco:Angle uom="degree">70</gco:Angle></smi:rotationAngleZ>
+            <smi:rotationSequence></smi:rotationSequence>
+        </smi:SD_AngleAttitude></cal:SD_Attitude>
+    </cal:satelliteAttitude>
+    <cal:timeOfMeasurement>
+        <cal:OrderedDateTime>
+            <cal:dateTime><gco:DateTime>2006-05-04T18:13:51.0</gco:DateTime></cal:dateTime>
+            <cal:dateTime><gco:DateTime>2006-05-04T18:13:51.0</gco:DateTime></cal:dateTime>
+        </cal:OrderedDateTime>
+    </cal:timeOfMeasurement>
+    <cal:latitudeOfMeasurement>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>60</gco:Real></cal:real>
+            <cal:real><gco:Real>70</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:latitudeOfMeasurement>
+    <cal:longitudeOfMeasurement>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>-100</gco:Real></cal:real>
+            <cal:real><gco:Real>-90</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:longitudeOfMeasurement>
+    <cal:satelliteGNSSPosition count="3" uomLabels="X Y Z">1 2 3 4 5 6 7 8 9</cal:satelliteGNSSPosition>
+</cal:CA_SatelliteAttachmentInformation>

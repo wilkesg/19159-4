@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_GeometricPosition
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:satelliteAttachmentInformation>
+        <cal:CA_SatelliteAttachmentInformation>
+            <cal:satelliteOrbitalHeight></cal:satelliteOrbitalHeight>
+            <cal:satelliteAttitude>
+                <cal:SD_Attitude><SD_AngleAttitude xmlns="https://schemas.isotc211.org/19130/-3/smi/1.1">
+                    <rotatedAxes></rotatedAxes>
+                    <rotationAngleX></rotationAngleX>
+                    <rotationAngleY></rotationAngleY>
+                    <rotationAngleZ></rotationAngleZ>
+                    <rotationSequence></rotationSequence>
+                </SD_AngleAttitude></cal:SD_Attitude>
+                <cal:SD_Attitude></cal:SD_Attitude>
+            </cal:satelliteAttitude>
+            <cal:timeOfMeasurement></cal:timeOfMeasurement>
+            <cal:latitudeOfMeasurement></cal:latitudeOfMeasurement>
+            <cal:longitudeOfMeasurement></cal:longitudeOfMeasurement>
+            <cal:satelliteGNSSPosition></cal:satelliteGNSSPosition>
+        </cal:CA_SatelliteAttachmentInformation>
+    </cal:satelliteAttachmentInformation>
+    <cal:microwaveRadiometerViewingAngle>
+        <gco:Angle uom="degree">10</gco:Angle>
+    </cal:microwaveRadiometerViewingAngle>
+    <cal:microwaveRadiometerIncidentAngle>
+        <gco:Angle uom="degree">20</gco:Angle>
+    </cal:microwaveRadiometerIncidentAngle>
+    <cal:microwaveRadiometerPixelSize>
+        <cal:real><gco:Real>1</gco:Real></cal:real>
+        <cal:real><gco:Real>2</gco:Real></cal:real>
+    </cal:microwaveRadiometerPixelSize>
+    <cal:microwaveRadiometerSamplingInterval>
+        <gco:Real>10.000</gco:Real>
+    </cal:microwaveRadiometerSamplingInterval>
+</cal:CA_GeometricPosition>

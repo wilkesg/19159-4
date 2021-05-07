@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_SpectralResponseFunction 
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+   <cal:frequency><cal:OrderedReal>
+      <cal:real><gco:Real>116.1526</gco:Real></cal:real>
+      <cal:real><gco:Real>116.1674</gco:Real></cal:real>
+      <cal:real><gco:Real>116.1821</gco:Real></cal:real>
+      <cal:real><gco:Real>116.1969</gco:Real></cal:real>
+      <cal:real><gco:Real>116.2117</gco:Real></cal:real>
+      <cal:real><gco:Real>116.2265</gco:Real></cal:real>
+      <cal:real><gco:Real>116.2412</gco:Real></cal:real>
+      <cal:real><gco:Real>116.256</gco:Real></cal:real>
+      <cal:real><gco:Real>116.2708</gco:Real></cal:real>
+      <cal:real><gco:Real>116.2856</gco:Real></cal:real>
+      <cal:real><gco:Real>116.3003</gco:Real></cal:real>
+      <cal:real><gco:Real>116.3151</gco:Real></cal:real>
+      <cal:real><gco:Real>116.3299</gco:Real></cal:real>
+      <cal:real><gco:Real>116.3447</gco:Real></cal:real>
+  </cal:OrderedReal>
+  </cal:frequency>
+  <cal:weight>
+      <cal:OrderedReal>
+          <cal:real><gco:Real>1</gco:Real></cal:real>
+          <cal:real><gco:Real>2</gco:Real></cal:real>
+          <cal:real><gco:Real>3</gco:Real></cal:real>
+          <cal:real><gco:Real>4</gco:Real></cal:real>
+          <cal:real><gco:Real>5</gco:Real></cal:real>
+          <cal:real><gco:Real>6</gco:Real></cal:real>
+          <cal:real><gco:Real>7</gco:Real></cal:real>
+          <cal:real><gco:Real>8</gco:Real></cal:real>
+          <cal:real><gco:Real>9</gco:Real></cal:real>
+          <cal:real><gco:Real>10</gco:Real></cal:real>
+          <cal:real><gco:Real>11</gco:Real></cal:real>
+          <cal:real><gco:Real>12</gco:Real></cal:real>
+          <cal:real><gco:Real>13</gco:Real></cal:real>
+          <cal:real><gco:Real>14</gco:Real></cal:real>
+      </cal:OrderedReal>
+  </cal:weight>
+</cal:CA_SpectralResponseFunction>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_VicariousCalibrationTrueValue xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:TBTrueValue>
+        <gco:Real>1</gco:Real>
+    </cal:TBTrueValue>
+    <cal:uncertainty>
+        <gco:Real>2</gco:Real>
+    </cal:uncertainty>
+    <cal:hotEndTBInformation>
+        <cal:CA_TargetTBInformation>
+            <cal:targetTB/>
+            <cal:targetTBBias/>
+            <cal:targetTBUncertainty/>
+            <cal:targetTBVoltage/>
+        </cal:CA_TargetTBInformation>
+    </cal:hotEndTBInformation>
+    <cal:coldEndTBInformation>
+        <cal:CA_TargetTBInformation>
+            <cal:targetTB/>
+            <cal:targetTBBias/>
+            <cal:targetTBUncertainty/>
+            <cal:targetTBVoltage/>
+        </cal:CA_TargetTBInformation>
+    </cal:coldEndTBInformation>
+    <cal:hotEndType>
+        <cal:CA_HotEndType codeList="codelist" codeListValue="code value">code label</cal:CA_HotEndType>
+    </cal:hotEndType>
+    <cal:coldEndType>
+        <cal:CA_ColdEndType codeList="codelist" codeListValue="code value">code label</cal:CA_ColdEndType>
+    </cal:coldEndType>
+</cal:CA_VicariousCalibrationTrueValue>

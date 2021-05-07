@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_AtmosphereProfile xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:atmosphereTemperature>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>1</gco:Real></cal:real>
+            <cal:real><gco:Real>2</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:atmosphereTemperature>
+    <cal:atmosphereHumidity>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>1</gco:Real></cal:real>
+            <cal:real><gco:Real>2</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:atmosphereHumidity>
+    <cal:atmospherePressure>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>1</gco:Real></cal:real>
+            <cal:real><gco:Real>2</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:atmospherePressure>
+    <cal:atmosphereLiquidWater>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>1</gco:Real></cal:real>
+            <cal:real><gco:Real>2</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:atmosphereLiquidWater>
+    <cal:cloudCover><gco:Real>50</gco:Real></cal:cloudCover>
+</cal:CA_AtmosphereProfile>

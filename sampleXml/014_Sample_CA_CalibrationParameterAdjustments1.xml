@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_CalibrationParameterAdjustments xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:hotTargetBTBias>
+        <gco:Real>1</gco:Real>
+    </cal:hotTargetBTBias>
+    <cal:coldTargetBTBias>
+        <gco:Real>2</gco:Real>
+    </cal:coldTargetBTBias>
+    <cal:nonlinearityCoeffecientCorrection>
+        <gco:Real>3</gco:Real>
+    </cal:nonlinearityCoeffecientCorrection>
+    <cal:antennaPatternCorrectionCoefficient>
+        <cal:OrderedReal>
+            <cal:real><gco:Real>1</gco:Real></cal:real>
+            <cal:real><gco:Real>2</gco:Real></cal:real>
+            <cal:real><gco:Real>3</gco:Real></cal:real>
+        </cal:OrderedReal>
+    </cal:antennaPatternCorrectionCoefficient>
+</cal:CA_CalibrationParameterAdjustments>

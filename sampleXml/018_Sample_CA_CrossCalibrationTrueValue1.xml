@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_CrossCalibrationTrueValue xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:TBTrueValue>
+        <gco:Real>1</gco:Real>
+    </cal:TBTrueValue>
+    <cal:uncertainty>
+        <gco:Real>2</gco:Real>
+    </cal:uncertainty>
+    <cal:referenceSatelliteName>
+        <gco:CharacterString>test</gco:CharacterString>
+    </cal:referenceSatelliteName>
+    <cal:calibratedSatelliteAttachmentInformation>
+        <cal:CA_SatelliteAttachmentInformation>
+            <cal:satelliteOrbitalHeight/>
+            <cal:satelliteAttitude>
+                <cal:SD_Attitude/>
+            </cal:satelliteAttitude>
+            <cal:timeOfMeasurement/>
+            <cal:latitudeOfMeasurement/>
+            <cal:longitudeOfMeasurement/>
+            <cal:satelliteGNSSPosition axisLabels="x y z" count="3">1 2 3</cal:satelliteGNSSPosition>
+        </cal:CA_SatelliteAttachmentInformation>
+    </cal:calibratedSatelliteAttachmentInformation>
+    <cal:referenceSatelliteAttachmentInformation>
+        <cal:CA_SatelliteAttachmentInformation>
+            <cal:satelliteOrbitalHeight/>
+            <cal:satelliteAttitude>
+                <cal:SD_Attitude/>
+            </cal:satelliteAttitude>
+            <cal:timeOfMeasurement/>
+            <cal:latitudeOfMeasurement/>
+            <cal:longitudeOfMeasurement/>
+            <cal:satelliteGNSSPosition axisLabels="x y z" count="1">1 2 3</cal:satelliteGNSSPosition>
+        </cal:CA_SatelliteAttachmentInformation>
+    </cal:referenceSatelliteAttachmentInformation>
+    <cal:referenceSatelliteTB>
+        <gco:Real>3</gco:Real>
+    </cal:referenceSatelliteTB>
+</cal:CA_CrossCalibrationTrueValue>

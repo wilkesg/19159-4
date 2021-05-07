@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_RadiativeTransferModel xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:atmosphereAbsorption>
+        <gco:Real>1</gco:Real>
+    </cal:atmosphereAbsorption>
+    <cal:oceanEmissivity>
+        <gco:Real>2</gco:Real>
+    </cal:oceanEmissivity>
+    <cal:oceanReflectivity>
+        <gco:Real>3</gco:Real>
+    </cal:oceanReflectivity>
+    <cal:landSurfaceEmissivity>
+        <gco:Real>4</gco:Real>
+    </cal:landSurfaceEmissivity>
+</cal:CA_RadiativeTransferModel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_OceanSurface xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:oceanSurfaceTemperature>
+        <gco:Real>1</gco:Real>
+    </cal:oceanSurfaceTemperature>
+    <cal:oceanSurfaceSalinity>
+        <gco:Real>2</gco:Real>
+    </cal:oceanSurfaceSalinity>
+    <cal:oceanSurfaceRoughness>
+        <gco:Real>3</gco:Real>
+    </cal:oceanSurfaceRoughness>
+    <cal:oceanWindSpeed>
+        <gco:Real>4</gco:Real>
+    </cal:oceanWindSpeed>
+    <cal:oceanWindDirection>
+        <gco:Real>5</gco:Real>
+    </cal:oceanWindDirection>
+    <cal:seaIceConcentration>
+        <gco:Real>6</gco:Real>
+    </cal:seaIceConcentration>
+</cal:CA_OceanSurface>

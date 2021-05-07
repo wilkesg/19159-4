@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cal:CA_AntennaPatternCalibration xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
+    <cal:TA>
+        <gco:Real>100</gco:Real>
+    </cal:TA>
+    <cal:spillover>
+        <gco:Real>100</gco:Real>
+    </cal:spillover>
+    <cal:satelliteAttitude/>
+    <cal:satelliteOrbitalHeight>
+        <gco:Real>100</gco:Real>
+    </cal:satelliteOrbitalHeight>
+    <cal:beamwidth>
+        <gco:Angle uom="degrees">80</gco:Angle>
+    </cal:beamwidth>
+    <cal:mainBeamEfficiency>
+        <gco:Real>0.5</gco:Real>
+    </cal:mainBeamEfficiency>
+    <cal:coPolAntennaPattern>
+        <cal:CA_AntennaPattern>
+            <cal:patternElevationAngle>
+                <cal:OrderedAngle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">10</gco:Angle>
+                    </cal:angle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">20</gco:Angle>
+                    </cal:angle>
+                </cal:OrderedAngle>
+            </cal:patternElevationAngle>
+            <cal:patternAzimuthAngle>
+                <cal:OrderedAngle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">20</gco:Angle>
+                    </cal:angle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">30</gco:Angle>
+                    </cal:angle>
+                </cal:OrderedAngle>
+            </cal:patternAzimuthAngle>
+            <cal:pattern>
+                <cal:elevationAngle>
+                    <cal:OrderedAngle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">10</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">20</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">30</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">40</gco:Angle>
+                        </cal:angle>
+                    </cal:OrderedAngle>
+                </cal:elevationAngle>
+                <cal:azimuthAngle>
+                    <cal:OrderedAngle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">20</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">30</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">40</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">50</gco:Angle>
+                        </cal:angle>
+                    </cal:OrderedAngle>
+                </cal:azimuthAngle>
+                <cal:amplitude>
+                    <cal:OrderedReal>
+                        <cal:real>
+                            <gco:Real>1</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>2</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>3</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>4</gco:Real>
+                        </cal:real>
+                    </cal:OrderedReal>
+                </cal:amplitude>
+                <cal:phase>
+                    <cal:OrderedReal>
+                        <cal:real>
+                            <gco:Real>1</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>2</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>3</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>4</gco:Real>
+                        </cal:real>
+                    </cal:OrderedReal>
+                </cal:phase>
+            </cal:pattern>
+        </cal:CA_AntennaPattern>
+    </cal:coPolAntennaPattern>
+    <cal:crossPolAntennaPattern>
+        <cal:CA_AntennaPattern>
+            <cal:patternElevationAngle>
+                <cal:OrderedAngle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">10</gco:Angle>
+                    </cal:angle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">20</gco:Angle>
+                    </cal:angle>
+                </cal:OrderedAngle>
+            </cal:patternElevationAngle>
+            <cal:patternAzimuthAngle>
+                <cal:OrderedAngle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">20</gco:Angle>
+                    </cal:angle>
+                    <cal:angle>
+                        <gco:Angle uom="degree">30</gco:Angle>
+                    </cal:angle>
+                </cal:OrderedAngle>
+            </cal:patternAzimuthAngle>
+            <cal:pattern>
+                <cal:elevationAngle>
+                    <cal:OrderedAngle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">10</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">20</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">30</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">40</gco:Angle>
+                        </cal:angle>
+                    </cal:OrderedAngle>
+                </cal:elevationAngle>
+                <cal:azimuthAngle>
+                    <cal:OrderedAngle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">20</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">30</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">40</gco:Angle>
+                        </cal:angle>
+                        <cal:angle>
+                            <gco:Angle uom="degree">50</gco:Angle>
+                        </cal:angle>
+                    </cal:OrderedAngle>
+                </cal:azimuthAngle>
+                <cal:amplitude>
+                    <cal:OrderedReal>
+                        <cal:real>
+                            <gco:Real>1</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>2</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>3</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>4</gco:Real>
+                        </cal:real>
+                    </cal:OrderedReal>
+                </cal:amplitude>
+                <cal:phase>
+                    <cal:OrderedReal>
+                        <cal:real>
+                            <gco:Real>1</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>2</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>3</gco:Real>
+                        </cal:real>
+                        <cal:real>
+                            <gco:Real>4</gco:Real>
+                        </cal:real>
+                    </cal:OrderedReal>
+                </cal:phase>
+            </cal:pattern>
+        </cal:CA_AntennaPattern>
+    </cal:crossPolAntennaPattern>
+    <cal:TBWithinTheScene>
+        <gco:Real>100</gco:Real>
+    </cal:TBWithinTheScene>
+</cal:CA_AntennaPatternCalibration>
