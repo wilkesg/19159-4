@@ -61,17 +61,17 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                    <element name="centreFrequency" type="gco:Real_PropertyType" minOccurs="1"
+                    <element name="centreFrequency" type="cal:OrderedReal_PropertyType" minOccurs="1"
                         maxOccurs="1" id="ISO19159-4.23_ISO19103.Real">
                         <annotation>
-                            <documentation>Centre frequency of the microwave radiometer
+                            <documentation>Centre frequencies of the microwave radiometer
                                 sensor.</documentation>
                         </annotation>
                     </element>
-                    <element name="bandwidth" type="gco:Real_PropertyType" minOccurs="1"
+                    <element name="bandwidth" type="cal:OrderedReal_PropertyType" minOccurs="1"
                         maxOccurs="1" id="ISO19159-4.24_ISO19103.Real">
                         <annotation>
-                            <documentation>Bandwidth of the microwave radiometer
+                            <documentation>Bandwidth frequencies of the microwave radiometer
                                 receiver.</documentation>
                         </annotation>
                     </element>
@@ -164,7 +164,7 @@
                                 within the bandwidth of the receiver.</documentation>
                         </annotation>
                     </element>
-                    <element name="nonlinearityCoefficient" type="cal:NonlinearityCoefficient_PropertyType" minOccurs="1" maxOccurs="1"
+                    <element name="nonlinearity" type="cal:Nonlinearity_PropertyType" minOccurs="1" maxOccurs="1"
                         id="ISO19159-4.33_ISO19103.Real">
                         <annotation>
                             <documentation>Coefficients at different operation temperatures of the
@@ -292,7 +292,6 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                        <!-- TODO: Elevation and azimuth angles included in pattern, so confirm whether or not the standalone values are needed -->
                        <element name="patternElevationAngle" type="cal:OrderedAngle_PropertyType" minOccurs="1" maxOccurs="1"
                             id="ISO19159-4.44_ISO19103.Angle">
                             <annotation>
@@ -306,24 +305,10 @@
                                 <documentation>Azimuth angle</documentation>
                             </annotation>
                         </element>
-                  <element name="pattern" id="ISO19159-4.46_GM_Vector" minOccurs="1" maxOccurs="1">
-                        <annotation>
-                            <documentation>Complex pattern including the amplitude and phase at different elevation angles and azimuth angles, 
-                                at least them should be given in E- and H- cuts of the ports of the antenna</documentation>
-                        </annotation>
-                      <complexType>
-                          <sequence>
-                              <element name="elevationAngle" type="cal:OrderedAngle_PropertyType"
+                        <element name="amplitude" type="cal:OrderedReal_PropertyType"
                                   minOccurs="1" maxOccurs="1"/>
-                              <element name="azimuthAngle" type="cal:OrderedAngle_PropertyType"
-                                  minOccurs="1" maxOccurs="1"/>
-                              <element name="amplitude" type="cal:OrderedReal_PropertyType"
-                                  minOccurs="1" maxOccurs="1"/>
-                              <element name="phase" type="cal:OrderedReal_PropertyType" minOccurs="1"
+                        <element name="phase" type="cal:OrderedReal_PropertyType" minOccurs="1"
                                   maxOccurs="1"/>
-                          </sequence>
-                      </complexType>
-                  </element>
                 </sequence>
             </extension>
         </complexContent>

@@ -4,17 +4,17 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
     <cal:TBTrueValue>
-        <gco:Real>1</gco:Real>
+        <gco:Real>284.5</gco:Real>
     </cal:TBTrueValue>
     <cal:uncertainty>
-        <gco:Real>2</gco:Real>
+        <gco:Real>1.0</gco:Real>
     </cal:uncertainty>
     <cal:hotEndTBInformation>
         <cal:CA_TargetTBInformation>
             <cal:targetTB/>
             <cal:targetTBBias/>
             <cal:targetTBUncertainty/>
-            <cal:targetTBVoltage/>
+            <cal:targetTBVoltage></cal:targetTBVoltage>
         </cal:CA_TargetTBInformation>
     </cal:hotEndTBInformation>
     <cal:coldEndTBInformation>
@@ -22,7 +22,7 @@
             <cal:targetTB/>
             <cal:targetTBBias/>
             <cal:targetTBUncertainty/>
-            <cal:targetTBVoltage/>
+            <cal:targetTBVoltage></cal:targetTBVoltage>
         </cal:CA_TargetTBInformation>
     </cal:coldEndTBInformation>
     <cal:hotEndType>

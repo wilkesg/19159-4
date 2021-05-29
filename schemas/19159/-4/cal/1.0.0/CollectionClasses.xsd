@@ -113,14 +113,14 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-   <element name="NonlinearityCoefficient" type="cal:NonlinearityCoefficient_Type"
+   <element name="Nonlinearity" type="cal:Nonlinearity_Type"
         substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>Collection of non-linear terms at specified sensor operating temperatures.</documentation>
         </annotation>
     </element>
     
-    <complexType name="NonlinearityCoefficient_Type">
+    <complexType name="Nonlinearity_Type">
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
@@ -135,9 +135,9 @@
         </complexContent>
     </complexType>
     
-    <complexType name="NonlinearityCoefficient_PropertyType">
+    <complexType name="Nonlinearity_PropertyType">
         <sequence minOccurs="0" maxOccurs="unbounded">
-            <element ref="cal:NonlinearityCoefficient"/>
+            <element ref="cal:Nonlinearity"/>
         </sequence>
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>

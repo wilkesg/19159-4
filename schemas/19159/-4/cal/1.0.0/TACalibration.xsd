@@ -47,7 +47,7 @@
                             <documentation>Spectral response function represented as a table of frequencies and response weights.</documentation>
                         </annotation>    
                     </element>
-                    <element name="nonlinearityCoefficient" id="ISO19159-4.63_ISO19103.Real" type="cal:NonlinearityCoefficient_PropertyType" minOccurs="1" maxOccurs="1">
+                    <element name="nonlinearity" id="ISO19159-4.63_ISO19103.Real" type="cal:Nonlinearity_PropertyType" minOccurs="1" maxOccurs="1">
                         <annotation>
                             <documentation>Coefficients at different operation temperatures of the radiometer for correcting the nonlinear contributions of the system.</documentation>
                         </annotation>

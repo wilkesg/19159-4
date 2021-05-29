@@ -6,7 +6,9 @@
  xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
     <cal:satelliteAttachmentInformation>
         <cal:CA_SatelliteAttachmentInformation>
-            <cal:satelliteOrbitalHeight></cal:satelliteOrbitalHeight>
+            <cal:satelliteOrbitalHeight>
+                <cal:OrderedReal><cal:real><gco:Real>836</gco:Real></cal:real></cal:OrderedReal>
+            </cal:satelliteOrbitalHeight>
             <cal:satelliteAttitude>
                 <cal:SD_Attitude><SD_AngleAttitude xmlns="https://schemas.isotc211.org/19130/-3/smi/1.1">
                     <rotatedAxes></rotatedAxes>
@@ -17,23 +19,23 @@
                 </SD_AngleAttitude></cal:SD_Attitude>
                 <cal:SD_Attitude></cal:SD_Attitude>
             </cal:satelliteAttitude>
-            <cal:timeOfMeasurement></cal:timeOfMeasurement>
-            <cal:latitudeOfMeasurement></cal:latitudeOfMeasurement>
-            <cal:longitudeOfMeasurement></cal:longitudeOfMeasurement>
+            <cal:timeOfMeasurement><cal:OrderedDateTime><cal:dateTime><gco:DateTime>2019-05-04T18:13:51.0</gco:DateTime></cal:dateTime></cal:OrderedDateTime></cal:timeOfMeasurement>
+            <cal:latitudeOfMeasurement><cal:OrderedReal><cal:real><gco:Real>50.00</gco:Real></cal:real></cal:OrderedReal></cal:latitudeOfMeasurement>
+            <cal:longitudeOfMeasurement><cal:OrderedReal><cal:real><gco:Real>100.00</gco:Real></cal:real></cal:OrderedReal></cal:longitudeOfMeasurement>
             <cal:satelliteGNSSPosition></cal:satelliteGNSSPosition>
         </cal:CA_SatelliteAttachmentInformation>
     </cal:satelliteAttachmentInformation>
     <cal:microwaveRadiometerViewingAngle>
-        <gco:Angle uom="degree">10</gco:Angle>
+        <gco:Angle uom="degree">30</gco:Angle>
     </cal:microwaveRadiometerViewingAngle>
     <cal:microwaveRadiometerIncidentAngle>
-        <gco:Angle uom="degree">20</gco:Angle>
+        <gco:Angle uom="degree">33.9</gco:Angle>
     </cal:microwaveRadiometerIncidentAngle>
     <cal:microwaveRadiometerPixelSize>
-        <cal:real><gco:Real>1</gco:Real></cal:real>
-        <cal:real><gco:Real>2</gco:Real></cal:real>
+        <cal:real><gco:Real>15</gco:Real></cal:real>
+        <cal:real><gco:Real>15</gco:Real></cal:real>
     </cal:microwaveRadiometerPixelSize>
     <cal:microwaveRadiometerSamplingInterval>
-        <gco:Real>10.000</gco:Real>
+        <gco:Real>12.0</gco:Real>
     </cal:microwaveRadiometerSamplingInterval>
 </cal:CA_GeometricPosition>

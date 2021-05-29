@@ -3,70 +3,83 @@
     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="https://schemas.isotc211.org/19159/-4/cal/1.0 file:/F:/Code/ISOReview-19159-4/schemas/schemas.isotc211.org/19159/-4/cal/1.0.0/cal.xsd">
-    <cal:TBTrueValue><gco:Real>1</gco:Real></cal:TBTrueValue>
-    <cal:uncertainty><gco:Real>2</gco:Real></cal:uncertainty>
+    <cal:TBTrueValue><gco:Real>288</gco:Real></cal:TBTrueValue>
+    <cal:uncertainty><gco:Real>0.9</gco:Real></cal:uncertainty>
     <cal:atmosphereProfile>
         <cal:CA_AtmosphereProfile>
             <cal:atmosphereTemperature>
                 <cal:OrderedReal>
-                <cal:real><gco:Real>1</gco:Real></cal:real>
-                <cal:real><gco:Real>2</gco:Real></cal:real>
+                    <cal:real><gco:Real>293</gco:Real></cal:real>
+                    <cal:real><gco:Real>290</gco:Real></cal:real>
+		    <cal:real><gco:Real>287</gco:Real></cal:real>
+                    <cal:real><gco:Real>284</gco:Real></cal:real>
+		    <cal:real><gco:Real>281</gco:Real></cal:real>
             </cal:OrderedReal>
             </cal:atmosphereTemperature>
             <cal:atmosphereHumidity>
                 <cal:OrderedReal>
-                    <cal:real><gco:Real>1</gco:Real></cal:real>
-                    <cal:real><gco:Real>2</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.03</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.02</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.02</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
                 </cal:OrderedReal>
             </cal:atmosphereHumidity>
             <cal:atmospherePressure>
                 <cal:OrderedReal>
-                    <cal:real><gco:Real>1</gco:Real></cal:real>
-                    <cal:real><gco:Real>2</gco:Real></cal:real>
+                    <cal:real><gco:Real>1013</gco:Real></cal:real>
+                    <cal:real><gco:Real>955</gco:Real></cal:real>
+		    <cal:real><gco:Real>900</gco:Real></cal:real>
+                    <cal:real><gco:Real>848</gco:Real></cal:real>
+		    <cal:real><gco:Real>799</gco:Real></cal:real>
                 </cal:OrderedReal>
             </cal:atmospherePressure>
             <cal:atmosphereLiquidWater>
                 <cal:OrderedReal>
-                    <cal:real><gco:Real>1</gco:Real></cal:real>
-                    <cal:real><gco:Real>2</gco:Real></cal:real>
-                </cal:OrderedReal>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.02</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
+                    <cal:real><gco:Real>0.01</gco:Real></cal:real>
+                 </cal:OrderedReal>
             </cal:atmosphereLiquidWater>
             <cal:cloudCover>
-                <gco:Real>1</gco:Real>
+                <gco:Real>10</gco:Real>
             </cal:cloudCover>
         </cal:CA_AtmosphereProfile>
     </cal:atmosphereProfile>
-    <cal:oceanSurface>
+    <!-- Either oceanSurface OR landSurface should be provided -->
+    <!--<cal:oceanSurface>
         <cal:CA_OceanSurface>
-            <cal:oceanSurfaceTemperature><gco:Real>1</gco:Real></cal:oceanSurfaceTemperature>
-            <cal:oceanSurfaceSalinity><gco:Real>2</gco:Real></cal:oceanSurfaceSalinity>
-            <cal:oceanSurfaceRoughness><gco:Real>3</gco:Real></cal:oceanSurfaceRoughness>
-            <cal:oceanWindSpeed><gco:Real>4</gco:Real></cal:oceanWindSpeed>
-            <cal:oceanWindDirection><gco:Real>5</gco:Real></cal:oceanWindDirection>
-            <cal:seaIceConcentration><gco:Real>6</gco:Real></cal:seaIceConcentration>
+            <cal:oceanSurfaceTemperature><gco:Real>293</gco:Real></cal:oceanSurfaceTemperature>
+            <cal:oceanSurfaceSalinity><gco:Real>35</gco:Real></cal:oceanSurfaceSalinity>
+            <cal:oceanSurfaceRoughness><gco:Real>10</gco:Real></cal:oceanSurfaceRoughness>
+            <cal:oceanWindSpeed><gco:Real>7</gco:Real></cal:oceanWindSpeed>
+            <cal:oceanWindDirection><gco:Real>135</gco:Real></cal:oceanWindDirection>
+            <cal:seaIceConcentration><gco:Real>0</gco:Real></cal:seaIceConcentration>
         </cal:CA_OceanSurface>
-    </cal:oceanSurface>
+    </cal:oceanSurface>-->
     <cal:landSurface>
         <cal:CA_LandSurface>
-            <cal:soilMoisture><gco:Real>1</gco:Real></cal:soilMoisture>
-            <cal:landSurfaceTemperature><gco:Real>2</gco:Real></cal:landSurfaceTemperature>
+            <cal:soilMoisture><gco:Real>10</gco:Real></cal:soilMoisture>
+            <cal:landSurfaceTemperature><gco:Real>293</gco:Real></cal:landSurfaceTemperature>
             <cal:landCoverType><cal:CA_LandCoverType codeList="codelist" codeListValue="code value">code label</cal:CA_LandCoverType></cal:landCoverType>
         </cal:CA_LandSurface>
     </cal:landSurface>
     <cal:radiativeTransferModel>
         <cal:CA_RadiativeTransferModel>
-            <cal:atmosphereAbsorption></cal:atmosphereAbsorption>
-            <cal:oceanEmissivity></cal:oceanEmissivity>
-            <cal:oceanReflectivity></cal:oceanReflectivity>
-            <cal:landSurfaceEmissivity></cal:landSurfaceEmissivity>
+            <cal:atmosphereAbsorption><gco:Real>0.5</gco:Real></cal:atmosphereAbsorption>
+            <cal:oceanEmissivity><gco:Real>0.5</gco:Real></cal:oceanEmissivity>
+            <cal:oceanReflectivity><gco:Real>0.5</gco:Real></cal:oceanReflectivity>
+            <cal:landSurfaceEmissivity><gco:Real>0.9</gco:Real></cal:landSurfaceEmissivity>
         </cal:CA_RadiativeTransferModel>
     </cal:radiativeTransferModel>
     <cal:geophysicsQualifyFlags>
         <cal:CA_GeophysicsQualifyFlags>
-            <cal:oceanLandFlag></cal:oceanLandFlag>
-            <cal:cloudFlag></cal:cloudFlag>
-            <cal:rainFlag></cal:rainFlag>
-            <cal:seaIceFlag></cal:seaIceFlag>
+            <cal:oceanLandFlag><gco:Integer>1</gco:Integer></cal:oceanLandFlag>
+            <cal:cloudFlag><gco:Integer>1</gco:Integer></cal:cloudFlag>
+            <cal:rainFlag><gco:Integer>0</gco:Integer></cal:rainFlag>
+            <cal:seaIceFlag><gco:Integer>0</gco:Integer></cal:seaIceFlag>
         </cal:CA_GeophysicsQualifyFlags>
     </cal:geophysicsQualifyFlags>
 </cal:CA_AbsoluteCalibrationTrueValue>
