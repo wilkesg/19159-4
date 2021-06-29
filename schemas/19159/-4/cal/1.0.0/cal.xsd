@@ -15,4 +15,5 @@
   <include schemaLocation="TACalibration.xsd"/>
   <include schemaLocation="TBCalibrationValidation.xsd"/>
   <include schemaLocation="TBTrueValue.xsd"/>
+  <include schemaLocation="codelists.xsd"/>
 </schema>

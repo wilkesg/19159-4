@@ -7,7 +7,7 @@
     <include schemaLocation="cal.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
         
-    <element name="CA_TBTrueValue" type="cal:CA_TBTrueValue_Type" id="ISO19159-4.90" substitutionGroup="gco:AbstractObject">
+    <element name="CA_TBTrueValue" type="cal:CA_TBTrueValue_Type" id="ISO19159-4.89" substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>TB True Value.</documentation>
         </annotation>    
@@ -19,16 +19,10 @@
         <sequence>         
             <element name="TBTrueValue" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
                 <annotation>
-                    <documentation>TB true value. 
-                        If TBTrueValueType=vicariousCalibration, 
-                          TBTrueValue= CA_VicariousCalibrationTrueValue.vicariousCalibrationTBValue; 
-                        If TBTrueValueType=crossCalibration, 
-                          TBTrueValue= CA_CrossCalibrationTrueValue.crossCalibrationTBValue; 
-                        If TBTrueValueType=vicariousCalibration, 
-                          TBTrueValue= CA_AbsoluteCalibrationTrueValue. absoluteCalibrationTBValue.</documentation>
+                    <documentation>TB true value.</documentation>
                 </annotation>
             </element>
-            <element name="uncertainty" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+            <element name="uncertainty" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1">
                 <annotation>
                     <documentation>
                         Uncertainty associated with TBTrueValue
@@ -58,32 +52,32 @@
         <complexContent>
             <extension base="cal:CA_TBTrueValue_Type">
         <sequence>
-            <element name="hotEndTBInformation" type="cal:CA_TargetTBInformation_PropertyType" id="ISO19159-4.96_ISO19159-4.65" minOccurs="1" maxOccurs="1">
+            <element name="hotEndTBInformation" type="cal:CA_TargetTBInformation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.96_ISO19159-4.65">
                 <annotation>
                     <documentation>Hot-end TB information.</documentation>
                 </annotation>
             </element>
-            <element name="coldEndTBInformation" type="cal:CA_TargetTBInformation_PropertyType" id="ISO19159-4.97_ISO19159-4.65" minOccurs="1" maxOccurs="1">
+            <element name="coldEndTBInformation" type="cal:CA_TargetTBInformation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.97_ISO19159-4.65">
                 <annotation>
                     <documentation>Cold-end TB information.</documentation>
                 </annotation>
             </element>
-            <element name="hotEndType" type="cal:CA_HotEndType_PropertyType" id="ISO19159-4.98_ISO19159-4.CA_HotEndType" minOccurs="1" maxOccurs="1">
+            <element name="hotEndType" type="cal:CA_HotEndType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.98_ISO19159-4.CA_HotEndType">
                 <annotation>
                     <documentation>Hot-end Type.</documentation>
                 </annotation>
             </element>
-            <element name="coldEndType" type="cal:CA_ColdEndType_PropertyType" id="ISO19159-4.99_ISO19159-4.CA_ColdEndType" minOccurs="1" maxOccurs="1">
+            <element name="coldEndType" type="cal:CA_ColdEndType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.99_ISO19159-4.CA_ColdEndType">
                 <annotation>
                     <documentation>Cold-end Type.</documentation>
                 </annotation>
             </element>
-            <!--<element name="vicariousCalibrationTBValue" type="gco:Real_PropertyType" id="ISO19159-4.100_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <!--<element name="vicariousCalibrationTBValue" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.100_ISO19103.Real">
                 <annotation>
                     <documentation>Vicarious calibration TB Value.</documentation>
                 </annotation>
             </element>
-            <element name="vicariousCalibrationTBUncertainty" type="gco:Real_PropertyType" id="ISO19159-4.101_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="vicariousCalibrationTBUncertainty" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.101_ISO19103.Real">
                 <annotation>
                     <documentation>Vicarious calibration TB uncertainty.</documentation>
                 </annotation>
@@ -111,22 +105,22 @@
         <complexContent>
             <extension base="cal:CA_TBTrueValue_Type">
         <sequence>
-            <element name="referenceSatelliteName" type="gco:CharacterString_PropertyType" id="ISO19159-4.103_ISO19103.CharacterString" minOccurs="1" maxOccurs="1">
+            <element name="referenceSatelliteName" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.103_ISO19103.CharacterString">
                 <annotation>
                     <documentation>Reference satellite name.</documentation>
                 </annotation>
             </element>
-            <element name="calibratedSatelliteAttachmentInformation" type="cal:CA_SatelliteAttachmentInformation_PropertyType" id="ISO19159-4.104" minOccurs="1" maxOccurs="1">
+            <element name="calibratedSatelliteAttachmentInformation" type="cal:CA_SatelliteAttachmentInformation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.104">
                 <annotation>
                     <documentation>Calibrated satellite attachment information.</documentation>
                 </annotation>
             </element>
-            <element name="referenceSatelliteAttachmentInformation" type="cal:CA_SatelliteAttachmentInformation_PropertyType" id="ISO19159-4.105" minOccurs="1" maxOccurs="1">
+            <element name="referenceSatelliteAttachmentInformation" type="cal:CA_SatelliteAttachmentInformation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.105">
                 <annotation>
                     <documentation>Reference satellite attachment information.</documentation>
                 </annotation>
             </element>
-            <element name="referenceSatelliteTB" type="gco:Real_PropertyType" id="ISO19159-4.106_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="referenceSatelliteTB" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.106_ISO19103.Real">
                 <annotation>
                     <documentation>Reference satellite TB.</documentation>
                 </annotation>
@@ -154,7 +148,7 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-    <element name="CA_AbsoluteCalibrationTrueValue" type="cal:CA_AbsoluteCalibrationTrueValue_Type" id="ISO19159-4.109" substitutionGroup="cal:CA_TBTrueValue">
+    <element name="CA_AbsoluteCalibrationTrueValue" type="cal:CA_AbsoluteCalibrationTrueValue_Type" substitutionGroup="cal:CA_TBTrueValue" id="ISO19159-4.109">
         <annotation>
             <documentation>Absolute calibration true value.</documentation>
         </annotation>
@@ -164,37 +158,39 @@
         <complexContent>
             <extension base="cal:CA_TBTrueValue_Type">
         <sequence>
-            <element name="atmosphereProfile" type="cal:CA_AtmosphereProfile_PropertyType" id="ISO19159-4.110_ISO19159-4.117" minOccurs="1" maxOccurs="1">
+            <element name="atmosphereProfile" type="cal:CA_AtmosphereProfile_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.110_ISO19159-4.117">
                 <annotation>
                     <documentation>Atmosphere profiles for computing using radiative transfer model.</documentation>
                 </annotation>
             </element>
-            <element name="oceanSurface" type="cal:CA_OceanSurface_PropertyType" id="ISO19159-4.111_ISO19159-4.122" minOccurs="1" maxOccurs="1">
-                <annotation>
-                    <documentation>Ocean surface informationparameters for computing using radiative transfer model.</documentation>
-                </annotation>
-            </element>
-            <element name="landSurface" type="cal:CA_LandSurface_PropertyType" id="ISO19159-4.112_ISO19159-4.130" minOccurs="1" maxOccurs="1">
-                <annotation>
-                    <documentation>Land surface parameters for computing using radiative transfer model.</documentation>
-                </annotation>
-            </element>
-            <element name="radiativeTransferModel" type="cal:CA_RadiativeTransferModel_PropertyType" id="ISO19159-4.113_ISO19159-4.135" minOccurs="1" maxOccurs="1">
+            <choice>
+                <element name="oceanSurface" type="cal:CA_OceanSurface_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.111_ISO19159-4.122">
+                    <annotation>
+                        <documentation>Ocean surface informationparameters for computing using radiative transfer model.</documentation>
+                    </annotation>
+                </element>
+                <element name="landSurface" type="cal:CA_LandSurface_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.112_ISO19159-4.130">
+                    <annotation>
+                        <documentation>Land surface parameters for computing using radiative transfer model.</documentation>
+                    </annotation>
+                </element>
+            </choice>
+            <element name="radiativeTransferModel" type="cal:CA_RadiativeTransferModel_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.113_ISO19159-4.135">
                 <annotation>
                     <documentation>Microwave Radiative transfer model for simulating the TB co-located to the satellite sensing.</documentation>
                 </annotation>
             </element>
-            <!-- <element name="absoluteCalibrationTBValue" type="gco:Real_PropertyType" id="ISO19159-4.114_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <!-- <element name="absoluteCalibrationTBValue" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.114_ISO19103.Real">
                 <annotation>
                     <documentation>Simulated TB true value using radiative transfer model or other absolute methods..</documentation>
                 </annotation>
             </element>
-            <element name="absoluteCalibrationTBUncertainty" type="gco:Real_PropertyType" id="ISO19159-4.115_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="absoluteCalibrationTBUncertainty" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.115_ISO19103.Real">
                 <annotation>
                     <documentation>Absolute calibration TB uncertainty.</documentation>
                 </annotation>
             </element>  -->
-            <element name="geophysicsQualifyFlags" type="cal:CA_GeophysicsQualifyFlags_PropertyType" id="ISO19159-4.116_ISO19159-4.139" minOccurs="1" maxOccurs="1">
+            <element name="geophysicsQualifyFlags" type="cal:CA_GeophysicsQualifyFlags_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.116_ISO19159-4.139">
                 <annotation>
                     <documentation>Geophysics Geo-location flags for qualifying the calibration.</documentation>
                 </annotation>
@@ -222,27 +218,57 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="atmosphereTemperature" type="cal:OrderedReal_PropertyType" id="ISO19159-4.118_GM_Vector" minOccurs="1" maxOccurs="1">
+            <element name="atmosphereTemperature" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.118_GM_Vector">
                 <annotation>
                     <documentation>Atmosphere temperature profile.</documentation>
                 </annotation>
             </element>
-            <element name="atmosphereHumidity" type="cal:OrderedReal_PropertyType" id="ISO19159-4.119_GM_Vector" minOccurs="1" maxOccurs="1">
+            <element name="atmosphereHumidity" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.119_GM_Vector">
                 <annotation>
                     <documentation>Atmosphere humidity profile.</documentation>
                 </annotation>
             </element>
-            <element name="atmospherePressure" type="cal:OrderedReal_PropertyType" id="ISO19159-4.120_GM_Vector" minOccurs="1" maxOccurs="1">
+            <element name="atmospherePressure" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.120_GM_Vector">
                 <annotation>
                     <documentation>Atmosphere pressure profile.</documentation>
                 </annotation>
             </element>
-            <element name="atmosphereLiquidWater" type="cal:OrderedReal_PropertyType" id="ISO19159-4.121.5_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="atmosphereLiquidWater" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.121.5_ISO19103.Real" >
                 <annotation>
                     <documentation>Atmosphere liquid water profile.</documentation>
                 </annotation>
             </element>
-            <element name="cloudCover" type="gco:Real_PropertyType" id="ISO19159-4.121_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="windSpeed" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1211_ISO19103.Real">
+                <annotation>
+                    <documentation>Wind speed.</documentation>
+                </annotation>
+            </element>
+            <element name="windDirection" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1212_ISO19103.Real">
+                <annotation>
+                    <documentation>Cloud cover percentage.</documentation>
+                </annotation>
+            </element>
+            <element name="timeOfMeasurement" type="cal:Sequence_DateTime__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1213_ISO19103.Real">
+                <annotation>
+                    <documentation>Cloud cover percentage.</documentation>
+                </annotation>
+            </element>
+            <element name="height" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1214_ISO19103.Real">
+                <annotation>
+                    <documentation>Height of measurement.</documentation>
+                </annotation>
+            </element>
+            <element name="latitude" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1215_ISO19103.Real">
+                <annotation>
+                    <documentation>Latitude of measurement.</documentation>
+                </annotation>
+            </element>
+            <element name="longitude" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.1216_ISO19103.Real">
+                <annotation>
+                    <documentation>Longitude of measurement.</documentation>
+                </annotation>
+            </element>
+            <element name="cloudCover" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.121_ISO19103.Real">
                 <annotation>
                     <documentation>Cloud cover percentage.</documentation>
                 </annotation>
@@ -260,6 +286,42 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
+    
+    <!--<element name="CA_AtmosphereProfileExt" type="cal:CA_AtmosphereProfileExt_Type" id="ISO19159-4.117Ext" substitutionGroup="cal:CA_AtmosphereProfile">
+        <annotation>
+            <documentation>Data type that defines the atmosphere profile.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_AtmosphereProfileExt_Type">
+        <complexContent>
+            <extension base="cal:CA_AtmosphereProfile_Type">
+                <sequence>
+                    <element name="HeightMSL" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1">
+                        <annotation>
+                            <documentation>Height - Mean Sea Level (m).</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rowNumber" type="cal:OrderedInteger_PropertyType" minOccurs="1" maxOccurs="1">
+                        <annotation>
+                            <documentation>Row number.</documentation>
+                        </annotation>
+                    </element>
+                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CA_AtmosphereProfileExt_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_AtmosphereProfileExt"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>-->
+    
+    
     <element name="CA_OceanSurface" type="cal:CA_OceanSurface_Type" id="ISO19159-4.122" substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>Data type that defines the ocean surface information.</documentation>
@@ -270,37 +332,37 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="oceanSurfaceTemperature" type="gco:Real_PropertyType" id="ISO19159-4.123_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanSurfaceTemperature" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.123_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface temperature.</documentation>
                 </annotation>
             </element>
-            <element name="oceanSurfaceSalinity" type="gco:Real_PropertyType" id="ISO19159-4.124_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanSurfaceSalinity" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.124_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface salinity.</documentation>
                 </annotation>
             </element>
-            <element name="oceanSurfaceRoughness" type="gco:Real_PropertyType" id="ISO19159-4.125_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanSurfaceRoughness" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.125_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface roughness.</documentation>
                 </annotation>
             </element>
-            <element name="oceanWindSpeed" type="gco:Real_PropertyType" id="ISO19159-4.126_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanWindSpeed" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.126_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface wind speed.</documentation>
                 </annotation>
             </element>
-            <element name="oceanWindDirection" type="gco:Real_PropertyType" id="ISO19159-4.127_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanWindDirection" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.127_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface wind direction (with respect to the North).</documentation>
                 </annotation>
             </element>
-            <!-- <element name="oceanSurfaceEmissivity" type="gco:Real_PropertyType" id="ISO19159-4.128_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <!-- <element name="oceanSurfaceEmissivity" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.128_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean surface emissivity.</documentation>
                 </annotation>
             </element>-->
-            <element name="seaIceConcentration" type="gco:Real_PropertyType" id="ISO19159-4.129_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="seaIceConcentration" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.129_ISO19103.Real">
                 <annotation>
                     <documentation>Sea ice concentration.</documentation>
                 </annotation>
@@ -328,22 +390,22 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="soilMoisture" type="gco:Real_PropertyType" id="ISO19159-4.131_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="soilMoisture" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.131_ISO19103.Real">
                 <annotation>
                     <documentation>Soil moisture.</documentation>
                 </annotation>
             </element>
-            <element name="landSurfaceTemperature" type="gco:Real_PropertyType" id="ISO19159-4.132_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="landSurfaceTemperature" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.132_ISO19103.Real">
                 <annotation>
                     <documentation>Land surface temperature.</documentation>
                 </annotation>
             </element>
-            <element name="landCoverType" type="cal:CA_LandCoverType_PropertyType" id="ISO19159-4.133_ISO19159-4.CA_LandCoverType" minOccurs="1" maxOccurs="1">
+            <element name="landCoverType" type="cal:CA_LandCoverType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.133_ISO19159-4.CA_LandCoverType">
                 <annotation>
                     <documentation>Land cover type.</documentation>
                 </annotation>
             </element>
-            <!--<element name="landSurfaceEmissivity" type="gco:Real_PropertyType" id="ISO19159-4.134_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <!--<element name="landSurfaceEmissivity" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.134_ISO19103.Real">
                 <annotation>
                     <documentation>Land surface emissivity.</documentation>
                 </annotation>
@@ -361,7 +423,7 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-    <element name="CA_RadiativeTransferModel" type="cal:CA_RadiativeTransferModel_Type" id="ISO19159-4.135" substitutionGroup="gco:AbstractObject">
+    <element name="CA_RadiativeTransferModel" type="cal:CA_RadiativeTransferModel_Type" substitutionGroup="gco:AbstractObject" id="ISO19159-4.135">
         <annotation>
             <documentation>Data type that defines the radiative transfer model.</documentation>
         </annotation>
@@ -371,22 +433,22 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="atmosphereAbsorption" type="gco:Real_PropertyType" id="ISO19159-4.136_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="atmosphereAbsorption" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.136_ISO19103.Real">
                 <annotation>
                     <documentation>Atmosphere absorption.</documentation>
                 </annotation>
             </element>
-            <element name="oceanEmissivity" type="gco:Real_PropertyType" id="ISO19159-4.137_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanEmissivity" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.137_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean emissivity.</documentation>
                 </annotation>
             </element>
-            <element name="oceanReflectivity" type="gco:Real_PropertyType" id="ISO19159-4.138_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="oceanReflectivity" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.138_ISO19103.Real">
                 <annotation>
                     <documentation>Ocean reflectivity.</documentation>
                 </annotation>
             </element>
-            <element name="landSurfaceEmissivity" type="gco:Real_PropertyType" id="ISO19159-4.134_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="landSurfaceEmissivity" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.134_ISO19103.Real">
                 <annotation>
                     <documentation>Land surface emissivity.</documentation>
                 </annotation>
@@ -414,22 +476,22 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="oceanLandFlag" type="gco:Integer_PropertyType" id="ISO19159-4.140_ISO19103.Integer" minOccurs="1" maxOccurs="1">
+            <element name="oceanLandFlag" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.140_ISO19103.Integer">
                 <annotation>
                     <documentation>Flag indicating the presence of land within the scene. The Flag can be determined from the land-ocean mask.</documentation>
                 </annotation>
             </element>
-            <element name="cloudFlag" type="gco:Integer_PropertyType" id="ISO19159-4.141_ISO19103.Integer" minOccurs="1" maxOccurs="1">
+            <element name="cloudFlag" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.141_ISO19103.Integer">
                 <annotation>
                     <documentation>Flag indicating the presence of cloud in the path of the observation.</documentation>
                 </annotation>
             </element>
-            <element name="rainFlag" type="gco:Integer_PropertyType" id="ISO19159-4.142_ISO19103.Integer" minOccurs="1" maxOccurs="1">
+            <element name="rainFlag" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.142_ISO19103.Integer">
                 <annotation>
                     <documentation>Flag indicating the presence of rain in the path of the observation.</documentation>
                 </annotation>
             </element>
-            <element name="seaIceFlag" type="gco:Integer_PropertyType" id="ISO19159-4.143_ISO19103.Integer" minOccurs="1" maxOccurs="1">
+            <element name="seaIceFlag" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.143_ISO19103.Integer">
                 <annotation>
                     <documentation>Flag indicating the presence of sea ice within the scene.</documentation>
                 </annotation>
@@ -444,62 +506,6 @@
             <element ref="cal:CA_GeophysicsQualifyFlags"/>
         </sequence>
         <attributeGroup ref="gco:ObjectReference"/>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_HotEndType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-   
-    <complexType name="CA_HotEndType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_HotEndType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_ColdEndType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-    
-    <complexType name="CA_ColdEndType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_ColdEndType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_LandCoverType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-
-    <complexType name="CA_LandCoverType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_LandCoverType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_TBTrueValueType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-    
-    <complexType name="CA_TBTrueValueType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_TBTrueValueType"/>
-        </sequence>
         <attribute ref="gco:nilReason"/>
     </complexType>
 </schema>

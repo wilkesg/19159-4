@@ -18,47 +18,47 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                    <element name="TBWithinTheScene" type="gco:Real_PropertyType" id="ISO19159-4.71_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="TBWithinTheScene" type="gco:Real_PropertyType"  minOccurs="1" maxOccurs="1" id="ISO19159-4.71_ISO19103.Real">
                         <annotation>
                             <documentation>TB within the scene of the microwave radiometer.</documentation>
                         </annotation>    
                     </element>
-                    <element name="payloadOperatingStatus" type="cal:CA_PayloadOperatingStatus_PropertyType" id="ISO19159-4.72_ISO19159-4.CA_PayloadOperatingStatus" minOccurs="1" maxOccurs="1">
+                    <element name="payloadOperatingStatus" type="cal:CA_PayloadOperatingStatus_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.72_ISO19159-4.CA_PayloadOperatingStatus">
                         <annotation>
                             <documentation>Payload operating status.</documentation>
                         </annotation>
                     </element>
-                    <element name="TBTrueValue" type="cal:CA_TBTrueValue_PropertyType" id="ISO19159-4.73_ISO19159-4.90" minOccurs="1" maxOccurs="1">
+                    <element name="TBTrueValue" type="cal:CA_TBTrueValue_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19159-4.73_ISO19159-4.90">
                         <annotation>
                             <documentation>The equivalent TB true value.</documentation>
                         </annotation>
                     </element>
-                    <element name="consistencyThreshold" type="gco:Real_PropertyType" id="ISO19159-4.74_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="consistencyThreshold" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.74_ISO19103.Real">
                         <annotation>
                             <documentation>Consistency threshold.</documentation>
                         </annotation>
                     </element>
-                    <element name="TBCalibrationBias" type="gco:Real_PropertyType" id="ISO19159-4.75_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="TBCalibrationBias" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.75_ISO19103.Real">
                         <annotation>
                             <documentation>TB calibration bias (output attribute).</documentation>
                         </annotation>
                     </element>
-                    <element name="TBCalibrationStandardDeviation" type="gco:Real_PropertyType" id="ISO19159-4.76_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="TBCalibrationStandardDeviation" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.76_ISO19103.Real">
                         <annotation>
                             <documentation>TB calibration standard deviation (output attribute).</documentation>
                         </annotation>
                     </element>
-                    <element name="calibrationParameterAdjustments" type="cal:CA_CalibrationParameterAdjustments_PropertyType" id="ISO19159-4.77_ISO19159-4.80" minOccurs="1" maxOccurs="1">
+                    <element name="calibrationParameterAdjustments" type="cal:CA_CalibrationParameterAdjustments_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.77_ISO19159-4.80">
                         <annotation>
                             <documentation>Calibration adjustment coefficients (output attribute).</documentation>
                         </annotation>
                     </element>
-                    <element name="reCalibratedTB" type="gco:Real_PropertyType" id="ISO19159-4.78_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="reCalibratedTB" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.78_ISO19103.Real">
                         <annotation>
                             <documentation>Re-calibrated TB (output attribute).</documentation>
                         </annotation>
                    </element>
-                    <element name="calibrationResults" type="cal:CA_CalibrationResults_PropertyType" id="ISO19159-4.79_ISO19159-4.85" minOccurs="1" maxOccurs="1">
+                    <element name="calibrationResults" type="cal:CA_CalibrationResults_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.79_ISO19159-4.85">
                         <annotation>
                             <documentation>Parameters in the calibration / validation report (output attribute).</documentation>
                         </annotation>
@@ -86,23 +86,22 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="hotTargetBTBias" type="gco:Real_PropertyType" id="ISO19159-4.81_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="hotTargetTBBias" type="gco:Real_PropertyType" id="ISO19159-4.81_ISO19103.Real" minOccurs="0" maxOccurs="1">
                 <annotation>
-                    <documentation>Hot target BT bias.</documentation>
+                    <documentation>Hot target TB bias.</documentation>
                 </annotation>
             </element>
-            <element name="coldTargetBTBias" type="gco:Real_PropertyType" id="ISO19159-4.82_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="coldTargetTBBias" type="gco:Real_PropertyType" id="ISO19159-4.82_ISO19103.Real" minOccurs="0" maxOccurs="1">
                 <annotation>
-                    <documentation>Cold target BT bias.</documentation>
+                    <documentation>Cold target TB bias.</documentation>
                 </annotation>
             </element>
-            <element name="nonlinearityCoeffecientCorrection" type="gco:Real_PropertyType" id="ISO19159-4.83_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="nonlinearityCorrection" type="gco:Real_PropertyType" id="ISO19159-4.83_ISO19103.Real" minOccurs="1" maxOccurs="1">
                 <annotation>
                     <documentation>Nonlinearity coefficient correction.</documentation>
                 </annotation>
             </element>
-            <!-- TODO: Confirm details on how this list of coefficients is derived and applied -->
-            <element name="antennaPatternCorrectionCoefficient" type="cal:OrderedReal_PropertyType" id="ISO19159-4.84_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="antennaPatternCorrectionCoefficient" type="cal:Sequence_Real__PropertyType" id="ISO19159-4.84_ISO19103.Real" minOccurs="1" maxOccurs="1">
                 <annotation>
                     <documentation>Antenna pattern correction coefficient.</documentation>
                 </annotation>
@@ -130,17 +129,17 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="calibrationBias" type="gco:Real_PropertyType" id="ISO19159-4.86_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="calibrationBias" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.86_ISO19103.Real">
                 <annotation>
                     <documentation>Calibration bias.</documentation>
                 </annotation>
             </element>
-            <element name="calibrationUncertainty" type="gco:Real_PropertyType" id="ISO19159-4.87_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="calibrationUncertainty" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.87_ISO19103.Real">
                 <annotation>
                     <documentation>Calibration uncertainty.</documentation>
                 </annotation>
             </element>
-            <element name="calibrationStability" type="gco:Real_PropertyType" id="ISO19159-4.88_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="calibrationStability" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.88_ISO19103.Real">
                 <annotation>
                     <documentation>Calibration stability.</documentation>
                 </annotation>
@@ -156,20 +155,5 @@
         </sequence>
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_PayloadOperatingStatus" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-   
-    <complexType name="CA_PayloadOperatingStatus_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_PayloadOperatingStatus"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
+    </complexType>   
 </schema>

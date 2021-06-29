@@ -66,9 +66,9 @@
                         </annotation>
                     </element>
                     <element name="TACalibration" type="cal:CA_TACalibration_PropertyType"
-                        minOccurs="1" maxOccurs="1" id="ISO19159-4.6_ISO19159-4.56">
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.6_ISO19159-4.53">
                         <annotation>
-                            <documentation>TA calibration</documentation>
+                            <documentation>TA calibration.</documentation>
                         </annotation>
                     </element>
                     <element name="antennaPatternCalibration"
@@ -79,7 +79,7 @@
                         </annotation>
                     </element>
                     <element name="geometricPosition" type="cal:CA_GeometricPosition_PropertyType"
-                        minOccurs="1" maxOccurs="1" id="ISO19159-4.8_ISO19159-4.50">
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.8_ISO19159-4.47">
                         <annotation>
                             <documentation>Geometric positioning.</documentation>
                         </annotation>
@@ -110,47 +110,4 @@
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>
     </complexType>
-     
-    <element name="CA_CalibrationType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-    
-    <complexType name="CA_CalibrationType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_CalibrationType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_ObservationType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-   
-    <complexType name="CA_ObservationType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_ObservationType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_ReceiverType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-   
-    <complexType name="CA_ReceiverType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_ReceiverType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
 </schema>

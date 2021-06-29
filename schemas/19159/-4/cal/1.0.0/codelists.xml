@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cat:CT_CodelistCatalogue 
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" 
-   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
-   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-   xmlns:gml="https://www.opengis.net/gml/3.2"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../../19115/-3/cat/1.0/cat.xsd"
-   >
+<cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="https://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../../19115/-3/cat/1.0/cat.xsd">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Calibration (cal) Namespace</gco:CharacterString>
@@ -650,7 +642,7 @@
       </cat:CT_Codelist>
    </cat:codelistItem>
    
-   <!-- TODO: Verify need for this after CA_TBTrueValue and sub-class resturcturing -->
+   <!-- TODO: Verify need for this after CA_TBTrueValue and sub-class restructuring-->
    <cat:codelistItem>
       <cat:CT_Codelist id="CA_TBTrueValueType">
          <cat:identifier>
@@ -711,20 +703,18 @@
          </cat:codeEntry>
       </cat:CT_Codelist>
    </cat:codelistItem>
-   
-   <!-- TODO: Confirm name for codelist -->
    <cat:codelistItem>
-      <cat:CT_Codelist id="CA_MRPolarizationMode">
+      <cat:CT_Codelist id="CA_PolarizationMode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">CA_MRPolarizationMode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">CA_PolarizationMode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">CA_MRPolarizationMode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">CA_PolarizationMode</gco:ScopedName>
          </cat:name>
          <cat:definition><gco:CharacterString>Type of main beam polarization mode</gco:CharacterString></cat:definition>
          <cat:description><gco:CharacterString>Type of main beam polarization mode</gco:CharacterString></cat:description>
          <cat:codeEntry>
-            <cat:CT_CodelistValue id="CA_MRPolarizationMode_vPol">
+            <cat:CT_CodelistValue id="CA_PolarizationMode_vPol">
                <cat:identifier>
                   <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">v-pol</gco:ScopedName>
                </cat:identifier>
@@ -740,7 +730,7 @@
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
-            <cat:CT_CodelistValue id="CA_MRPolarizationMode_hPol">
+            <cat:CT_CodelistValue id="CA_PolarizationMode_hPol">
                <cat:identifier>
                   <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">h-pol</gco:ScopedName>
                </cat:identifier>
@@ -756,7 +746,7 @@
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
-            <cat:CT_CodelistValue id="CA_MRPolarizationMode_UPol">
+            <cat:CT_CodelistValue id="CA_PolarizationMode_UPol">
                <cat:identifier>
                   <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">U-pol</gco:ScopedName>
                </cat:identifier>
@@ -772,7 +762,7 @@
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
-            <cat:CT_CodelistValue id="CA_MRPolarizationMode_VPol">
+            <cat:CT_CodelistValue id="CA_PolarizationMode_VPol">
                <cat:identifier>
                   <gco:ScopedName codeSpace="https://schemas.isotc211.org/19159/-4/cal/1.0">V-pol</gco:ScopedName>
                </cat:identifier>

@@ -7,7 +7,7 @@
     <include schemaLocation="cal.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
     
-    <element name="CA_TACalibration" type="cal:CA_TACalibration_Type" id="ISO19159-4.56" substitutionGroup="gco:AbstractObject">
+    <element name="CA_TACalibration" type="cal:CA_TACalibration_Type" id="ISO19159-4.53" substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>Information related to the antenna temperature calibration of the microwave radiometer system.</documentation>
         </annotation>    
@@ -17,42 +17,42 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                    <element name="hotTargetTBInformation" type="cal:CA_TargetTBInformation_PropertyType" id="ISO19159-4.57_ISO19159-4.65" minOccurs="1" maxOccurs="1">
+                    <element name="hotTargetTBInformation" type="cal:CA_TargetTBInformation_PropertyType"  minOccurs="1" maxOccurs="1" id="ISO19159-4.54_ISO19159-4.62">
                         <annotation>
                             <documentation>Hot target TB information.</documentation>
                         </annotation>    
                     </element>
-                    <element name="coldTargetTBInformation" type="cal:CA_TargetTBInformation_PropertyType" id="ISO19159-4.58_ISO19159-4.65" minOccurs="1" maxOccurs="1">
+                    <element name="coldTargetTBInformation" type="cal:CA_TargetTBInformation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.55_ISO19159-4.62">
                         <annotation>
                             <documentation>Cold target TB information.</documentation>
                         </annotation>    
                     </element>
-                    <element name="receiverTemperature" type="gco:Real_PropertyType" id="ISO19159-4.59_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="receiverTemperature" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.56_ISO19103.Real">
                         <annotation>
                             <documentation>Operation temperature of the microwave radiometer.</documentation>
                         </annotation>    
                     </element>
-                    <element name="hotTargetType" type="cal:CA_HotTargetType_PropertyType" id="ISO19159-4.60_ISO19159-4.CA_HotTargetType" minOccurs="1" maxOccurs="1">
+                    <element name="hotTargetType" type="cal:CA_HotTargetType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.57_ISO19159-4.CA_HotTargetType">
                         <annotation>
                             <documentation>Hot target type.</documentation>
                         </annotation>    
                     </element>
-                    <element name="coldTargetType" type="cal:CA_ColdTargetType_PropertyType" id="ISO19159-4.61_ISO19159-4.CA_ColdTargetType" minOccurs="1" maxOccurs="1">
+                    <element name="coldTargetType" type="cal:CA_ColdTargetType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.58_ISO19159-4.CA_ColdTargetType">
                         <annotation>
                             <documentation>Cold target type.</documentation>
                         </annotation>   
                     </element>
-                   <element name="spectralResponseFunction" type="cal:CA_SpectralResponseFunction_PropertyType" id="ISO19159-4.62_ISO19159-4.47" minOccurs="1" maxOccurs="1">
+                    <element name="spectralResponseFunction" type="cal:CA_SpectralResponseFunction_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.59_ISO19159-4.67">
                         <annotation>
                             <documentation>Spectral response function represented as a table of frequencies and response weights.</documentation>
                         </annotation>    
                     </element>
-                    <element name="nonlinearity" id="ISO19159-4.63_ISO19103.Real" type="cal:Nonlinearity_PropertyType" minOccurs="1" maxOccurs="1">
+                    <element name="nonlinearity" type="cal:NonlinearityTerms_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.60_ISO19159-4.154">
                         <annotation>
                             <documentation>Coefficients at different operation temperatures of the radiometer for correcting the nonlinear contributions of the system.</documentation>
                         </annotation>
                     </element>
-                    <element name="TA" type="gco:Real_PropertyType" id="ISO19159-4.64_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="TA" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.61_ISO19103.Real">
                         <annotation>
                             <documentation>Antenna temperature(output attribute).</documentation>
                         </annotation>    
@@ -70,7 +70,7 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-    <element name="CA_TargetTBInformation" type="cal:CA_TargetTBInformation_Type" id="ISO19159-4.65" substitutionGroup="gco:AbstractObject">
+    <element name="CA_TargetTBInformation" type="cal:CA_TargetTBInformation_Type" id="ISO19159-4.62" substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>Data type that defines the target (either hot or cold) TB information.</documentation>
         </annotation>    
@@ -80,22 +80,22 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
         <sequence>
-            <element name="targetTB" type="gco:Real_PropertyType" id="ISO19159-4.66_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="targetTB" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.63_ISO19103.Real">
                 <annotation>
                     <documentation>TB from the measured target, usually form varied-temperature blackbody.</documentation>
                 </annotation>    
             </element>
-            <element name="targetTBBias" type="gco:Real_PropertyType" id="ISO19159-4.67_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="targetTBBias" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.64_ISO19103.Real">
                 <annotation>
                     <documentation>Bias in TB of the targetTB.</documentation>
                 </annotation>    
             </element>
-            <element name="targetTBUncertainty" type="gco:Real_PropertyType" id="ISO19159-4.68_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="targetTBUncertainty" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.65_ISO19103.Real">
                 <annotation>
                     <documentation>Uncertainty in TB of the targetTB.</documentation>
                 </annotation>    
             </element>
-            <element name="targetTBVoltage" type="gco:Real_PropertyType" id="ISO19159-4.69_ISO19103.Real" minOccurs="1" maxOccurs="1">
+            <element name="targetTBVoltage" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.66_ISO19103.Real">
                 <annotation>
                     <documentation>Microwave radiometer output in voltage or count.</documentation>
                 </annotation>
@@ -113,8 +113,7 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-    <element name="CA_SpectralResponseFunction" type="cal:CA_SpectralResponseFunction_Type"
-        id="ISO19159-4.47" substitutionGroup="gco:AbstractObject">
+    <element name="CA_SpectralResponseFunction" type="cal:CA_SpectralResponseFunction_Type" id="ISO19159-4.67" substitutionGroup="gco:AbstractObject">
         <annotation>
             <documentation>Data type that defines the spectral response function of the microwave
                 radiometer sensor.</documentation>
@@ -125,8 +124,16 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>   
-                    <element name="frequency" type="cal:OrderedReal_PropertyType" minOccurs="1" maxOccurs="1"></element>
-                    <element name="weight" type="cal:OrderedReal_PropertyType" minOccurs="0" maxOccurs="1"></element>
+                    <element name="frequency" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.68_ISO19159-4.144">
+                        <annotation>
+                            <documentation>Frequency.</documentation>
+                        </annotation>    
+                    </element>
+                    <element name="spectralResponse" type="cal:Sequence_Real__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.69_ISO19159-4.144">
+                        <annotation>
+                            <documentation>Response weights or radio at the frequencies within the bandwidth of the receiver.</documentation>
+                        </annotation>        
+                    </element>
                 </sequence>
             </extension>
         </complexContent>
@@ -140,31 +147,4 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     
-    <element name="CA_HotTargetType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-    
-    <complexType name="CA_HotTargetType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_HotTargetType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
-    
-    <element name="CA_ColdTargetType" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-    
-    <complexType name="CA_ColdTargetType_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_ColdTargetType"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
 </schema>

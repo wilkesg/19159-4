@@ -23,16 +23,15 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                    <!-- TODO: SCF and satelliteAttachmentInformation exist in the UML model, but are missing from the dictionary, so corrected IDs will need to be added once addressed -->
                     <element name="SCF" type="cal:CA_SCF_PropertyType" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.22_ISO19159-4.22">
+                        id="ISO19159-4.21.1_ISO19159-4.22">
                         <annotation>
                             <documentation>Sensor Constant File used for calibration</documentation>
                         </annotation>
                     </element>
                     <element name="satelliteAttachmentInformation"
                         type="cal:CA_SatelliteAttachmentInformation_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.36_ISO19159-4.36">
+                        maxOccurs="1" id="ISO19159-4.21.2_ISO19159-4.36">
                         <annotation>
                             <documentation>Satellite attachment information.</documentation>
                         </annotation>
@@ -61,55 +60,36 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                    <element name="centreFrequency" type="cal:OrderedReal_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.23_ISO19103.Real">
+                    <element name="centreFrequency" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="2" id="ISO19159-4.23_ISO19103.Real">
                         <annotation>
                             <documentation>Centre frequencies of the microwave radiometer
                                 sensor.</documentation>
                         </annotation>
                     </element>
-                    <element name="bandwidth" type="cal:OrderedReal_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.24_ISO19103.Real">
+                    <element name="bandwidth" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="2" id="ISO19159-4.24_ISO19103.Real">
                         <annotation>
                             <documentation>Bandwidth frequencies of the microwave radiometer
                                 receiver.</documentation>
                         </annotation>
                     </element>
-                    <element name="bandwidthCorrectionCoefficients" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.25_ISO19103.Real">
+                    <element name="bandwidthCorrectionCoefficients" type="gco:Real_PropertyType" minOccurs="2" maxOccurs="2" id="ISO19159-4.25_ISO19103.Real">
                         <annotation>
                             <documentation>Bandwidth correction coefficients including 2 items of
                                 the first-order correction.</documentation>
                         </annotation>
-                        <complexType>
-                            <sequence>
-                                <element name="real" type="gco:Real_PropertyType" minOccurs="2"
-                                    maxOccurs="2"/>
-                            </sequence>
-                        </complexType>
                     </element>
-                    <element name="USBLimit" id="ISO19159-4.26_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                    <element name="USBLimit" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.26_ISO19159-4.144">
                         <annotation>
                             <documentation>Frequency range of the Upper Side Band.</documentation>
                         </annotation>
-                        <complexType>
-                            <sequence>
-                                <element name="real" type="gco:Real_PropertyType" minOccurs="2" maxOccurs="2"></element>
-                            </sequence>
-                        </complexType>
                     </element>
-                    <element name="LSBLimit" id="ISO19159-4.27_ISO19103.Real" minOccurs="1"
-                        maxOccurs="1">
+                    <element name="LSBLimit" type="cal:Sequence_Real__PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.27_ISO19159-4.144">
                         <annotation>
                             <documentation>Frequency range of the Lower Side Band.</documentation>
                         </annotation>
-                        <complexType>
-                            <sequence>
-                                <element name="real" type="gco:Real_PropertyType" minOccurs="2" maxOccurs="2"></element>
-                            </sequence>
-                        </complexType>
                     </element>
-                    <element name="modifiedStokesParameters" minOccurs="0" maxOccurs="1">
+                    <!--<element name="modifiedStokesParameters" minOccurs="0" maxOccurs="1" id="ISO19159-4.27.1_ISO19103.Real">
                         <annotation>
                             <documentation>Modified Stokes parameters in brightness temperature (TB) for Rayleigh-Jeans approximation 
                                 where Tv, Th, T3 and T4 are, respectively, the vertically and horizontally polarized and the third 
@@ -120,9 +100,9 @@
                                 <element name="real" type="gco:Real_PropertyType" minOccurs="4" maxOccurs="4"></element>
                             </sequence>
                         </complexType>
-                    </element>
-                    <element name="polarizationMode" type="cal:CA_MRPolarizationMode_PropertyType"
-                        minOccurs="1" maxOccurs="1">
+                    </element>-->
+                    <element name="polarizationMode" type="cal:CA_PolarizationMode_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.28_ISO19159-4.CA_MRPolarizationMode">
                         <annotation>
                             <documentation>Polarization mode of the radiometer, usually referring to
                                 vertical and horizontal polarization, which corresponding to the
@@ -130,23 +110,15 @@
                                 the four Stokes parameters.</documentation>
                         </annotation>
                     </element>
-                    <element name="mainBeamEfficiency" type="gco:Real_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.29_ISO19103.Real">
+                    <element name="mainBeamEfficiency" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.29_ISO19103.Real">
                         <annotation>
                             <documentation>Antenna main beam efficiency.</documentation>
                         </annotation>
                     </element>
-                    <element name="thermistorCalibrationCoefficients" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.30_ISO19103.Real">
+                    <element name="thermistorCalibrationCoefficients" type="gco:Real_PropertyType" minOccurs="3" maxOccurs="3" id="ISO19159-4.30_ISO19103.Real">
                         <annotation>
                             <documentation>Thermistor calibration coefficients.</documentation>
                         </annotation>
-                        <complexType>
-                            <sequence>
-                                <element name="real" type="gco:Real_PropertyType" minOccurs="3"
-                                    maxOccurs="3"/>
-                            </sequence>
-                        </complexType>
                     </element>
                     <element name="antennaPattern" type="cal:CA_AntennaPattern_PropertyType"
                         minOccurs="1" maxOccurs="1" id="ISO19159-4.31_ISO19159-4.43">
@@ -155,17 +127,7 @@
                                 elevation angles and azimuth angles.</documentation>
                         </annotation>
                     </element>
-                    <!-- TODO: Suggest possibly changing from cal:CA_SpectralResponseFunction_PropertyType to BandwidthFrequencyAndWeight -->
-                    <element name="spectralResponseFunction"
-                        type="cal:CA_SpectralResponseFunction_PropertyType"
-                        id="ISO19159-4.32_ISO19159-4.47" minOccurs="1" maxOccurs="1">
-                        <annotation>
-                            <documentation>Spectral response weights or ratio at the frequencies
-                                within the bandwidth of the receiver.</documentation>
-                        </annotation>
-                    </element>
-                    <element name="nonlinearity" type="cal:Nonlinearity_PropertyType" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.33_ISO19103.Real">
+                    <element name="nonlinearity" type="cal:NonlinearityTerms_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.33_ISO19159-4.154">
                         <annotation>
                             <documentation>Coefficients at different operation temperatures of the
                                 radiometer for correcting the nonlinear contributions of the
@@ -173,14 +135,12 @@
                             </documentation>
                         </annotation>
                     </element>
-                    <element name="hotTargetTB" type="gco:Real_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.34_ISO19103.Real">
+                    <element name="hotTargetTB" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.34_ISO19103.Real">
                         <annotation>
                             <documentation>Hot target TB.</documentation>
                         </annotation>
                     </element>
-                    <element name="coldTargetTB" type="gco:Real_PropertyType" minOccurs="1"
-                        maxOccurs="1" id="ISO19159-4.35_ISO19103.Real">
+                    <element name="coldTargetTB" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.35_ISO19103.Real">
                         <annotation>
                             <documentation>Cold target TB.</documentation>
                         </annotation>
@@ -211,50 +171,42 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                      <element name="satelliteOrbitalHeight" type="cal:OrderedReal_PropertyType" id="ISO19159-4.37_ISO19103.Real"
-                        minOccurs="1" maxOccurs="1">
+                      <element name="satelliteOrbitalHeight" type="cal:Sequence_Real__PropertyType" id="ISO19159-4.37_ISO19159-4.144" minOccurs="0" maxOccurs="1">
                         <annotation>
                             <documentation>Satellite orbital height with respect to the reference
                                 ellipsoid.</documentation>
                         </annotation>
                     </element>
 
-                    <element name="satelliteAttitude" minOccurs="1" maxOccurs="1" id="ISO19159-4.38">
+                    <element name="satelliteAttitude" type="cal:Sequence_SD_Attitude__PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.38_ISO19130-1.SD_Attitude">
                         <annotation>
                             <documentation>Satellite attitude expressed in the combination of the
                                 omega, phi and kappa components.</documentation>
                         </annotation>
-                        <complexType>
-                            <sequence>
-                                <element name="SD_Attitude" type="smi:SD_Attitude_PropertyType"
-                                    maxOccurs="unbounded"/>
-                            </sequence>
-                        </complexType>
                     </element>
 
-                    <element name="timeOfMeasurement" type="cal:OrderedDateTime_PropertyType" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.39_ISO19103.DateTime">
+                    <element name="timeOfMeasurement" type="cal:Sequence_DateTime__PropertyType" minOccurs="1" maxOccurs="1"
+                        id="ISO19159-4.39_ISO19159-4.146">
                         <annotation>
                             <documentation>Time of measurement.</documentation>
                         </annotation>
                     </element>
 
-                    <element name="latitudeOfMeasurement"  type="cal:OrderedReal_PropertyType" minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.40_ISO19103.Real">
+                    <element name="latitudeOfMeasurement"  type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1"
+                        id="ISO19159-4.40_ISO19159-4.144">
                         <annotation>
                             <documentation>Latitude of measurement.</documentation>
                         </annotation>
                     </element>
 
-                    <element name="longitudeOfMeasurement" type="cal:OrderedReal_PropertyType"  minOccurs="1" maxOccurs="1"
-                        id="ISO19159-4.41_ISO19103.Real">
+                    <element name="longitudeOfMeasurement" type="cal:Sequence_Real__PropertyType"  minOccurs="1" maxOccurs="1"
+                        id="ISO19159-4.41_ISO19159-4.144">
                         <annotation>
                             <documentation>Longitude of measurement.</documentation>
                         </annotation>
                     </element>
 
-                    <element name="satelliteGNSSPosition" type="gml:DirectPositionListType" id="ISO19159-4.42_GM_DirectPosition"
-                        minOccurs="1" maxOccurs="1">
+                    <element name="satelliteGNSSPosition" type="gml:DirectPositionListType" id="ISO19159-4.42_ISO19159-4.152" minOccurs="0" maxOccurs="1">
                         <annotation>
                             <documentation>List of satellite GNSS positions ([X, Y, Z] coordinates, expressed
                                 in meters). 
@@ -292,23 +244,29 @@
         <complexContent>
             <extension base="gco:AbstractObject_Type">
                 <sequence>
-                       <element name="patternElevationAngle" type="cal:OrderedAngle_PropertyType" minOccurs="1" maxOccurs="1"
-                            id="ISO19159-4.44_ISO19103.Angle">
+                       <element name="patternElevationAngle" type="cal:Sequence_Angle__PropertyType" minOccurs="1" maxOccurs="1"
+                           id="ISO19159-4.44_ISO19159-4.148">
                             <annotation>
                                 <documentation>Elevation angle</documentation>
                             </annotation>
                         </element>
 
                         <element name="patternAzimuthAngle" 
-                            id="ISO19159-4.45_ISO19103.Angle" type="cal:OrderedAngle_PropertyType" minOccurs="1" maxOccurs="1">
+                            type="cal:Sequence_Angle__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.45_ISO19159-4.148">
                             <annotation>
                                 <documentation>Azimuth angle</documentation>
                             </annotation>
                         </element>
-                        <element name="amplitude" type="cal:OrderedReal_PropertyType"
-                                  minOccurs="1" maxOccurs="1"/>
-                        <element name="phase" type="cal:OrderedReal_PropertyType" minOccurs="1"
-                                  maxOccurs="1"/>
+                        <element name="amplitude" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1">
+                            <annotation>
+                                <documentation>Amplitude for each position defined by (elevation angle, azimuth angle).</documentation>
+                            </annotation>    
+                        </element>
+                        <element name="phase" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1">
+                            <annotation>
+                                <documentation>Phase for each position defined by (elevation angle, azimuth angle).</documentation>
+                            </annotation>
+                        </element>
                 </sequence>
             </extension>
         </complexContent>
@@ -321,18 +279,5 @@
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>
     </complexType>
-    
-    <element name="CA_MRPolarizationMode" substitutionGroup="gco:CharacterString"
-        type="gco:CodeListValue_Type">
-        <annotation>
-            <documentation/>
-        </annotation>
-    </element>
-  
-    <complexType name="CA_MRPolarizationMode_PropertyType">
-        <sequence minOccurs="0">
-            <element ref="cal:CA_MRPolarizationMode"/>
-        </sequence>
-        <attribute ref="gco:nilReason"/>
-    </complexType>
+       
 </schema>
