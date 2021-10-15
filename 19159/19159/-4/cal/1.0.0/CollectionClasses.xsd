@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+    elementFormDefault="qualified" targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2"
+        schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+        schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2"
+        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
+    <element name="Sequence_CA_AntennaPatternValue_" type="cal:Sequence_CA_AntennaPatternValue__Type" id="ISO19159-4.139"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Sequence of antenna pattern values.</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="Sequence_CA_AntennaPatternValue__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="CA_AntennaPatternValue" type="cal:CA_AntennaPatternValue_PropertyType" minOccurs="1" maxOccurs="unbounded"
+                        id="ISO19159-4.140_ISO19159-4.48">
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Sequence_CA_AntennaPatternValue__PropertyType">
+        <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="cal:Sequence_CA_AntennaPatternValue_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+    <element name="Sequence_SD_Attitude_" type="cal:Sequence_SD_Attitude__Type" id="ISO19159-4.141"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Sequence of smi:SD_Attitude values.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="Sequence_SD_Attitude__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence maxOccurs="unbounded">
+                    <element name="SD_Attitude" type="smi:SD_Attitude_PropertyType" id="ISO19159-4.142_ISO19130-1.SD_Attitude"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Sequence_SD_Attitude__PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:Sequence_SD_Attitude_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+    <element name="Sequence_Real_" type="cal:Sequence_Real__Type" id="ISO19159-4.143_ISO19103.Real"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Collection containing multiple gco:Real values.</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="Sequence_Real__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence maxOccurs="unbounded">
+                    <element name="Real" type="gco:Real_PropertyType" id="ISO19159-4.144_ISO19103.Real"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Sequence_Real__PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:Sequence_Real_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+    <element name="Sequence_DirectPosition_" type="cal:Sequence_DirectPosition__Type" id="ISO19159-4.145" substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Collection containing multiple gml:DirectPosition values.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="Sequence_DirectPosition__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence maxOccurs="unbounded">
+                    <element name="DirectPosition" type="gml:DirectPositionType" id="ISO19159-4.146_ISO19107.DirectPosition"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Sequence_DirectPosition__PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:Sequence_DirectPosition_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="Sequence_Angle_" type="cal:Sequence_Angle__Type" id="ISO19159-4.147"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Collection containing multiple gco:Angle values.</documentation>
+        </annotation>
+    </element>
+    <complexType name="Sequence_Angle__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence maxOccurs="unbounded">
+                    <element name="Angle" type="gco:Angle_PropertyType" id="ISO19159-4.148_ISO19103.Real"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Sequence_Angle__PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:Sequence_Angle_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+    <element name="Sequence_DateTime_" type="cal:Sequence_DateTime__Type" id="ISO19159-4.149"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Collection containing multiple gco:DateTime values.</documentation>
+        </annotation>
+    </element>
+    <complexType name="Sequence_DateTime__Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence maxOccurs="unbounded">
+                    <element name="DateTime" type="gco:DateTime_PropertyType" id="ISO19159-4.150_ISO19103.DateTime"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Sequence_DateTime__PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:Sequence_DateTime_"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+</schema>
