@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    elementFormDefault="qualified" targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1" schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+
+    <element name="CA_AuxiliaryData" type="cal:CA_AuxiliaryData_Type" id="ISO19159-4.51"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Information related to the auxiliary data that are needed in the
+                microwave radiometer calibration procedure.</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="CA_AuxiliaryData_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="SCF" type="cal:CA_SCF_PropertyType" minOccurs="1" maxOccurs="1"
+                        id="ISO19159-4.52-ISO19159-4.61">
+                        <annotation>
+                            <documentation>Sensor Constant File used for calibration</documentation>
+                        </annotation>
+                    </element>
+                    <element name="satelliteAttachmentInformation"
+                        type="cal:CA_SatelliteAttachmentInformation_PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.52-ISO19159-4.54">
+                        <annotation>
+                            <documentation>Satellite attachment information.</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="CA_AuxiliaryData_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_AuxiliaryData"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_SatelliteAttachmentInformation"
+        type="cal:CA_SatelliteAttachmentInformation_Type" id="ISO19159-4.54"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Data type that defines the satellite attachment
+                information.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_SatelliteAttachmentInformation_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="satelliteOrbitalHeight" type="cal:Sequence_Real__PropertyType"
+                        id="ISO19159-4.55_ISO19103.Real" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>Satellite orbital height with respect to the reference
+                                ellipsoid.</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <element name="satelliteAttitude" type="cal:Sequence_SD_Attitude__PropertyType"
+                        minOccurs="0" maxOccurs="1" id="ISO19159-4.56_ISO19130-1.SD_Attitude">
+                        <annotation>
+                            <documentation>Satellite attitude expressed in the combination of the
+                                omega, phi and kappa components.</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <element name="timeOfMeasurement" type="cal:Sequence_DateTime__PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.57_ISO19103.DateTime">
+                        <annotation>
+                            <documentation>Time of measurement.</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <element name="latitudeOfMeasurement" type="cal:Sequence_Real__PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.58_ISO19103.Real">
+                        <annotation>
+                            <documentation>Latitude of measurement.</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <element name="longitudeOfMeasurement" type="cal:Sequence_Real__PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.59_ISO19103.Real">
+                        <annotation>
+                            <documentation>Longitude of measurement.</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <element name="satelliteGNSSPosition" type="cal:Sequence_DirectPosition__PropertyType"
+                        id="ISO19159-4.60_ISO19107.DirectPosition" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>Satellite GNSS position ([X, Y, Z] coordinates, expressed
+                                in meters). </documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CA_SatelliteAttachmentInformation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_SatelliteAttachmentInformation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>      
+    
+    
+    <element name="CA_SCF" type="cal:CA_SCF_Type" id="ISO19159-4.61"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Sensor Constant File used for calibration</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="CA_SCF_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="centreFrequency" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.62_ISO19103.Real">
+                        <annotation>
+                            <documentation>Centre frequencies of the microwave radiometer
+                                sensor.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="bandwidth" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.63_ISO19103.Real">
+                        <annotation>
+                            <documentation>Bandwidth frequencies of the microwave radiometer
+                                receiver.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="bandwidthCorrectionCoefficients" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.64_ISO19103.Real">
+                        <annotation>
+                            <documentation>Bandwidth correction coefficients including 2 items of
+                                the first-order correction.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="USBLimit" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.65_ISO19103.Real">
+                        <annotation>
+                            <documentation>Frequency range of the Upper Side Band.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="LSBLimit" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.66_ISO19103.Real">
+                        <annotation>
+                            <documentation>Frequency range of the Lower Side Band.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="polarizationMode" type="cal:CA_PolarizationMode_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.67_ISO19159-4.CA_MRPolarizationMode">
+                        <annotation>
+                            <documentation>Polarization mode of the radiometer, usually referring to
+                                vertical and horizontal polarization, which corresponding to the
+                                first two modified Stokes parameters, most generally referring to
+                                the four Stokes parameters.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="mainBeamEfficiency" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.68_ISO19103.Real">
+                        <annotation>
+                            <documentation>Antenna main beam efficiency.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="thermistorCalibrationCoefficients" type="cal:Sequence_Real__PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.69_ISO19103.Real">
+                        <annotation>
+                            <documentation>Thermistor calibration coefficients.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="antennaPattern" type="cal:CA_AntennaPattern_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.70_ISO19159-4.44">
+                        <annotation>
+                            <documentation>Antenna pattern at a given frequency within a range of
+                                elevation angles and azimuth angles.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="nonlinearity" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.71_ISO19103.Real">
+                        <annotation>
+                            <documentation>Coefficients at the operation temperature.
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="hotTargetTB" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.72_ISO19103.Real">
+                        <annotation>
+                            <documentation>Bias in TB of the Hot target blackbody.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="coldTargetTB" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.73_ISO19103.Real">
+                        <annotation>
+                            <documentation>Bias in TB of the Cold target.</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="CA_SCF_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_SCF"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+</schema>
